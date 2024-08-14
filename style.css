@@ -1,0 +1,94 @@
+body {
+    background-color: #cbd1d1;
+}
+
+h1 {
+    color: #343a40;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#poemForm {
+    margin-bottom: 2rem;
+}
+
+#poemsList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #3b5066;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #3e377a;
+}
+
+.text-muted {
+    color: #355b7c !important;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    background: linear-gradient(to right, #294c5d, #94aab9);
+    padding: 80px 0;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    color: #748699;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+/* General Container Styling */
+.container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Blurry and Semi-transparent Background for Other Parts */
+.card {
+    background: rgba(123, 156, 169, 0.2); /* Semi-transparent white background */
+ /* Blurry effect */
+    border-radius: 10px;
+    color: #0f3d6b; /* Text color matching the hero section */
+}
+
+/* Buttons and Form Elements */
+.btn-primary {
+    background-color: #3a6073;
+    border-color: #3a6073;
+}
+
+.btn-primary:hover {
+    background-color: #16222a;
+    border-color: #16222a;
+}
+
+/* Poem Titles */
+.card-title {
+    font-size: 1.5rem;
+    color: #007bff; /* Bright blue color for titles */
+}
+
+/* Poem Text */
+.card-text {
+    font-size: 1rem;
+    color: #21466b; /* Light color for readability on dark background */
+}
+
+/* Add subtle shadow for text readability */
+.card p, .card h5 {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}

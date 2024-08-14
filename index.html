@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Poetry Collection</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section text-center text-white py-5">
+        <h1 class="display-4 mb-3">My - prana's Poetry Collection</h1>
+        <p class="lead">Express your thoughts and emotions through the beauty of words.</p>
+    </div>    
+    <!-- Form to Add New Poem -->
+    <div class="card mb-4">
+        <div class="card-header">Add a New Poem/Shayari</div>
+        <div class="card-body">
+            <form id="poemForm">
+                <div class="mb-3">
+                    <label for="poemTitle" class="form-label">Poem/Shayari Title</label>
+                    <input type="text" class="form-control" id="poemTitle" placeholder="Enter the title of your poem">
+                </div>
+                <div class="mb-3">
+                    <label for="poemContent" class="form-label">Poem/Shayari</label>
+                    <textarea class="form-control" id="poemContent" rows="5" placeholder="Write your poem here"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Poem</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Poems List -->
+    <div id="poemsList" class="row">
+        <!-- Sample Poem -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">Sample Poem Title</h5>
+                    <p class="card-text">This is a sample poem. The words flow like water, softly and gently, echoing the beat of the heart.</p>
+                    <p class="card-text"><small class="text-muted">By Prathamesh</small></p>
+                </div>
+            </div>
+        </div>
+        <!-- More poems will be added here dynamically -->
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Handle form submission
+    document.getElementById('poemForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form data
+        const title = document.getElementById('poemTitle').value;
+        const content = document.getElementById('poemContent').value;
+
+        // Create a new poem card
+        const poemCard = document.createElement('div');
+        poemCard.className = 'col-md-4';
+        poemCard.innerHTML = `
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">${title}</h5>
+                    <p class="card-text">${content}</p>
+                    <p class="card-text"><small class="text-muted">By Prathamesh</small></p>
+                </div>
+            </div>
+        `;
+
+        // Add the new poem to the poems list
+        document.getElementById('poemsList').appendChild(poemCard);
+
+        // Clear the form
+        document.getElementById('poemForm').reset();
+    });
+</script>
+</body>
+</html>
+
